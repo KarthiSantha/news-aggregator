@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"flag"
 
 	"fmt"
 	"html/template"
@@ -152,8 +151,8 @@ func main() {
 		port = "3000"
 	}
 
-	apiKey = flag.String("apikey", "", "Newsapi.org access key")
-	flag.Parse()
+	//apiKey = flag.String("apikey", "", "Newsapi.org access key")
+	//flag.Parse()
 	temp := "364ec6bca2704665a7b090313b541a4c"
 
 	apiKey = &temp
