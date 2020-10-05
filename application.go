@@ -163,6 +163,6 @@ func main() {
 	mux.Handle("/assets/", http.StripPrefix("/assets/", fs))
 
 	mux.HandleFunc("/search", searchHandler)
-	mux.HandleFunc("/", indexHandler)
+	mux.HandleFunc("/home", indexHandler)
 	http.ListenAndServe(":"+port, mux)
 }
