@@ -16,7 +16,7 @@ import (
 
 //"flag"
 
-var tpl = template.Must(template.ParseFiles("index.html"))
+var tpl = template.Must(template.ParseFiles("../index.html"))
 var apiKey *string
 
 type Source struct {
@@ -163,6 +163,6 @@ func main() {
 	mux.Handle("/assets/", http.StripPrefix("/assets/", fs))
 
 	mux.HandleFunc("/search", searchHandler)
-	mux.HandleFunc("/home", indexHandler)
+	mux.HandleFunc("/", indexHandler)
 	http.ListenAndServe(":"+port, mux)
 }
